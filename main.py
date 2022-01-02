@@ -2,12 +2,17 @@ import requests
 from bs4 import BeautifulSoup as bs 
 
 # Tring out several methods to capture data from several pages when ran. So far the results have not been as expected. 
-# Indeed is not very friendly to scraping - which I can understand but doesnt change much from my seat.
-
 
 #for x in range(0,20,10): 
+#job, title = data analyst, Denver
+
+x = 0
+
+while x <= 60:
     
     x = x+10
+    
+    #webpage=requests.get('https://www.indeed.com/jobs?q={}&l={}&start={}'.format(title,location,x))
 
     webpage=requests.get('https://www.indeed.com/jobs?q=data%20analyst&l=Denver%2C%20CO&start={}'.format(x))
 
